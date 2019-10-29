@@ -27,4 +27,4 @@
 
 
 
-[MySQL安装][dhhh]
+[MySQL安装](MySQL.md)
