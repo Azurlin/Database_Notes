@@ -1,8 +1,8 @@
-##MySQL安装
-#####1.下载并解压MySQL安装包<br/>
+## MySQL安装
+##### 1.下载并解压MySQL安装包<br/>
  &emsp; &emsp; **[mysql-8.0.18-winx64](https://dev.mysql.com/downloads/mysql/)**
 
-#####2.启动MySQL服务<br/>
+##### 2.启动MySQL服务<br/>
 &emsp; &emsp; 打开cmd 进入mysql安装目录在bin目录下输入 **mysqld --initialize --console**<br/>
 &emsp; &emsp; 执行成功会打印初始默认用户密码
 
@@ -10,7 +10,7 @@
 
 &emsp; &emsp; root@localhost:后面的就是初始密码
 
-#####3.启动MySQL
+##### 3.启动MySQL
 
 &emsp; &emsp; 打开另一个命令行 输入**mysql -h hostname -u root -p** 启动MySQL<br/>
  ![base64str][b2]<br/>
