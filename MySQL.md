@@ -8,11 +8,12 @@
 
  ![ini1](https://github.com/Azurlin/Database_Notes/blob/master/image/ini1.png?raw=true)
 
-&emsp; &emsp; root@localhost:后面的就是初始密码
+&emsp; &emsp; root@localhost:后面的就是初始密码<br/>
+&emsp; &emsp; 重置密码：**mysql> ALTER USER USER() IDENTIFIED BY '新的密码';**<br/>
+&emsp; &emsp; 之后直接用**mysqld --console**启动服务
 
 ##### 3.启动MySQL
 
-&emsp; &emsp; 打开另一个命令行 输入**mysql -h hostname -u root -p** 启动MySQL<br/>
- ![si1](https://github.com/Azurlin/Database_Notes/blob/master/image/si1.png?raw=true)<br/>
-&emsp; &emsp; 出现此错误提示可以试试用 **mysql -u root -h 127.0.0.1 -p**启动<br/>
+&emsp; &emsp; 打开另一个命令行 输入**mysql -h 用户名 -u root -p** 启动MySQL<br/>
+&emsp; &emsp; 或者使用 **mysql  -h 127.0.0.1 -u root  -p 和mysql  -h locolhost -u root  -p**启动<br/>
  
