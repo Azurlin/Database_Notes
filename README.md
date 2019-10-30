@@ -24,7 +24,7 @@
 
 #### 1. MySQL的优势：  体积小 速度快 使用成本低,中小企业的首选 
 #### 2. [MySQL安装](MySQL.md)
-#### 3. [MySQL数据库的相关操作](om\omysql.md)
+#### 3. [MySQL数据库的相关操作](om/omysql.md)
 
 
 
