@@ -1,5 +1,9 @@
 # DataBase_Notes
+[Gitpages](https://azurlin.github.io/Database_Notes/)
+
 ## 数据库笔记
+
+
 ### 一.数据库的基本概念
 &emsp;对数据进行存储和管理
 
@@ -16,6 +20,8 @@
  + **数据库管理系统(DataBase Management System DBMS)**：<br/>
 操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一管理和控制。<br/>当前比较流行的数据库管理系统：Oracle、MySQL、SQLServer、DB2 <br/>
 通常情况下，经常会用数据库来表示我们使用的数据库软件... 数据库是通过数据库管理系统创建和操作的。
+
+
 #### 3.数据库技术经历阶段
 
 + **层次数据库和网状数据库阶段**

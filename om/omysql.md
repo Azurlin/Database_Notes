@@ -1,6 +1,7 @@
 ### 3. MySQL数据库的相关操作
 1. 关于库的操作
-2. 关于数据的操作
+2. 关于表的操作
+3. 关于数据的操作
 
 ## &emsp;**(1).关于库的操作** 
 
@@ -28,7 +29,7 @@
 		drop database database_name; #删库
 
 
-### &emsp;**(2).关于表的操作** 
+## &emsp;**(2).关于表的操作** 
 &emsp;&emsp;表是mysql数据库中一种很重要的对象，是组成数据库的基本元素，表是按照行、列的格式组织的，主要用来存储数据。
 
 
@@ -61,7 +62,7 @@
 
 
 		#修改表名
-		alter table old_name rename[to] new_table_name;
+		alter table old_name rename to new_table_name;
 		
 	&emsp;***给表增加字段***
 
@@ -90,5 +91,5 @@
 		#同时修改字段名和数据类型
 		alter table table_name change 旧列 新列 新数据类型;
 
-## &emsp;(2).关于数据的操作
+## &emsp;(3).关于数据的操作
 

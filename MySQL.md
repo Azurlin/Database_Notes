@@ -15,5 +15,5 @@
 ##### 3.启动MySQL
 
 &emsp; &emsp; 打开另一个命令行 输入**mysql -h 用户名 -u root -p** 启动MySQL<br/>
-&emsp; &emsp; 或者使用 **mysql  -h 127.0.0.1 -u root  -p 和mysql  -h locolhost -u root  -p**启动<br/>
+&emsp; &emsp; 或者使用 **mysql  -h 127.0.0.1 -u root  -p 和mysql  -h localhost -u root  -p**启动<br/>
  
