@@ -2,6 +2,8 @@
 
 [MySQL 数据类型](https://www.runoob.com/mysql/mysql-data-types.html)
 
+ [返回](README.md)
+
 ####1. 整数类型
 
 
@@ -21,4 +23,10 @@ time|表示时分秒
 year|表示年
 
 ####4. 字符串类型
+
+- **char(m)**  &emsp;定长字符串 &emsp;**m** 为 **0~255**之间的整数
+- **varchar(m)**  &emsp;变长字符串&emsp;**m** 为 **0~65535**之间的整数
+
+
+
 
