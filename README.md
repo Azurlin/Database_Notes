@@ -1,5 +1,4 @@
 # DataBase_Notes
-[Gitpages](https://azurlin.github.io/Database_Notes/)
 
 ## 数据库笔记
 
@@ -20,8 +19,7 @@
  + **数据库管理系统(DataBase Management System DBMS)**：<br/>
 操作和管理数据库的大型软件，用于建立、使用和维护数据库，对数据库进行统一管理和控制。<br/>当前比较流行的数据库管理系统：Oracle、MySQL、SQLServer、DB2 <br/>
 通常情况下，经常会用数据库来表示我们使用的数据库软件... 数据库是通过数据库管理系统创建和操作的。
-
-
+ 
 #### 3.数据库技术经历阶段
 
 + **层次数据库和网状数据库阶段**
@@ -34,8 +32,9 @@
 &emsp; MySQL数据库是一种开源免费，轻量级的数据库管理系统。发展历史1979年开始 
 
 #### 1. MySQL的优势：  体积小 速度快 使用成本低,中小企业的首选 
-#### 2. [MySQL安装](MySQL.md)
-#### 3. [MySQL数据库的相关操作](om/omysql.md)
+#### 2. [MySQL安装](install.md)
+#### 3. [MySQL数据库的相关操作](op.md)
+#### 4. 数据类型
 
 
 
