@@ -66,3 +66,32 @@
 		); #一次设置多个主键
 
 #### 5. **auto_increment** 字段自动增加
+
+&emsp;&emsp;在插入数据的时候，字段上会自动生成唯一的序号，序号为整数类型，一般自动增加的属性是给设置pk的字段加的，而且一个表中只能有一个字段加该属性。
+
+		create table t6(
+			a int primary key auto_increment,
+			b varchar(10)
+			);
+		insert into t6(b) values('hello');
+		select * from t6;
+		#插入多次查看结果
+		insert into t6(b) values('hello1');
+		insert into t6(b) values('hello2');
+		insert into t6(b) values('hello3');
+		select * from t6;
+
+
+![tablecon06]()
+
+&emsp;&emsp;a按照序列号自动增加了
+
+		insert into t6(a,b) values(20,'hello5');
+		insert into t6(b) values('hello6');
+		select * from t6;
+
+![tablecon0602]()
+
+
+&emsp;&emsp;可见自动增加是按照上一行的序号增加
+

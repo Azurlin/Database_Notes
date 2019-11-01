@@ -73,7 +73,7 @@
 		#修改表名
 		alter table old_name rename to new_table_name;
 		
-	&emsp;***给表增加字段***
+	&emsp;**(1).给表增加字段**
 
 		#在最后一个位置增加字段
 		alter table table_name add 列名 数据类型;
@@ -84,12 +84,12 @@
 		#在指定位置添加字段
 		alter table table_name add 新的列名 数据类型 after 列名;
 
-	&emsp;***删除字段***
+	&emsp;**(2).删除字段**
 
 		#删除某一列
 		alter table table_name drop 列名;
 
-	&emsp;***修改字段***
+	&emsp;**(3).修改字段**
 
 		#修改字段数据类型 列名为要修改的列 数据类型为修改后的
 		alter table table_name modify 列名 数据类型;
@@ -106,6 +106,25 @@
 ---
 
 
-- [数据类型](datatype)
+##### (1).  **插入数据**
+
+- 插入表中所有列的数据
+
+		insert into table_name(列1,列2,列3,...,n) values(值1,值2,值3,...,n);
+		
+		insert into table_name values(值1,值2,值3,...,n)
+
+
+- 插入表中部分列的数据
+
+				
+
+
+##### (2).  **更新数据**
+##### (3).  **删除数据**
+##### (4).  **查询数据**
+
+
+
 
 
