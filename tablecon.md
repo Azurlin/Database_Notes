@@ -9,7 +9,7 @@
 		create table t1(
 			a int not null,
 			b int
-
+		);
 		insert into t1(a,b) values(3,5);
 		select * from t1;
 
@@ -24,7 +24,7 @@
 		insert into t2(b) values('rewq'); # a列无默认值为NULL
 		select * from t2;
 
-![tablecon02]()
+![tablecon02](https://github.com/Azurlin/Database_Notes/blob/master/image/tablecon02.png?raw=true)
 
 
 
@@ -39,7 +39,7 @@
 		);
 		insert into t3(a) values(10);
 		select * from t3;
-![tablecon03]()
+![tablecon03](https://github.com/Azurlin/Database_Notes/blob/master/image/tablecon03.png?raw=true)
 
 
 &emsp;&emsp;可见10出现过一次，无法再次插入
@@ -54,6 +54,7 @@
 		insert into t4(a) values(1); # 可以
 		insert into t4(a) values(1); # 报错，不符合唯一
 		insert into t4(a) values(null); # 报错，不能为空
+		select * from t4;
 
 - 多字段设置主键
 
