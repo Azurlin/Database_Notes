@@ -90,7 +90,7 @@
 		insert into t6(b) values('hello6');
 		select * from t6;
 
-![tablecon0602]()
+![tablecon0602](https://github.com/Azurlin/Database_Notes/blob/master/image/table0602.png?raw=true)
 
 
 &emsp;&emsp;可见自动增加是按照上一行的序号增加
