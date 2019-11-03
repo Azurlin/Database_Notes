@@ -106,23 +106,63 @@
 ---
 
 
-##### (1).  **插入数据**
++   **插入数据**
 
-- 插入表中所有列的数据
+	 &emsp;**(1).插入表中部分列或所有列的数据**
 
-		insert into table_name(列1,列2,列3,...,n) values(值1,值2,值3,...,n);
+
+
+			insert into table_name(列1,列2,列3,...,列n) values(值1,值2,值3,...,n);
 		
-		insert into table_name values(值1,值2,值3,...,n)
+			insert into table_name values(值1,值2,值3,...,n)
 
 
-- 插入表中部分列的数据
 
-				
+	 &emsp;**(2).一次插入多条所有列的数据**
+
+			insert into table_name(列1,列2,,...,列n或所有列) values(值1~值n),(值1~值n)...;
+			#值1到值n是所有列的值，不能少
+		
+			#例：一次插入三条数据
+			insert into t1(name,id,age) # 或者"insert into t1"插入所有列
+			values('xw',1001,20),
+			  	('xh',1002,21),
+			  	('ll',1003,20);
+
+	 &emsp;**(3).往表中插入查询出的结果**
+
+			insert into table_name(列1,列2,列3...) select 列_1,列_2,列_3... from table_name_1;
+		
+			#例：将t1表中查询出的结果插入到t2中
+			insert into t2(id,name) select id,name frome t1;
+			#说明：查询表t2中的id,name列并插入到t1的id,name列
 
 
-##### (2).  **更新数据**
-##### (3).  **删除数据**
-##### (4).  **查询数据**
+
++   **更新数据**
+
+	 &emsp;**(1).更新特定数据**
+	
+			update table_name set 列1=值1,列2=值2... where 条件   #值为更新的数据值	
+	
+			#例：将表t1中id为1001的数据的name，age更新为zhangsan，40
+			update t1 set name='zhangsan',age=40 where id=1001;
+			
+	 &emsp;**(2).更新所有数据** 全表更新
+	
+			update table_name set 列1=值1,列2=值2...;	
+		
+
++  **删除数据**
+	
+	&emsp;**(1).删除特定数据**
+
+		delete from table_name where 条件;
+
+	&emsp;**(2).删除所有数据**
+
+
++  **查询数据**
 
 
 
