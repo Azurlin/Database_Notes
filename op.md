@@ -157,12 +157,46 @@
 	
 	&emsp;**(1).删除特定数据**
 
-		delete from table_name where 条件;
+			delete from table_name where 条件;
 
 	&emsp;**(2).删除所有数据**
 
+			delete from table_name;
+
 
 +  **查询数据**
+	
+	**(1).单表数据查询**
+
+
+	1).简单数据查询
+
+
+			select 列1,列2,列3... from table_name;
+			select * from table_name;
+
+			#distinct避免重复数据查询
+			
+
+
+	2).条件数据查询
+
+			
+
+
+	**(2).多表数据查询**
+
+			delete from table_name;
+
+
+
+					
+
+
+
+
+
+
 
 
 
