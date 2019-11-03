@@ -2,6 +2,7 @@
 [关于库的操作](#1-关于库的操作)<br/>
 [关于表的操作](#2-关于表的操作)<br/>
 [关于数据的操作](#3-关于数据的操作)
+<br/>&emsp;[查询数据](select.md)
 
  [返回](README.md)
 
@@ -164,29 +165,8 @@
 			delete from table_name;
 
 
-+  **查询数据**
++  [**查询数据**](select.md)
 	
-	**(1).单表数据查询**
-
-
-	1).简单数据查询
-
-
-			select 列1,列2,列3... from table_name;
-			select * from table_name;
-
-			#distinct避免重复数据查询
-			
-
-
-	2).条件数据查询
-
-			
-
-
-	**(2).多表数据查询**
-
-			delete from table_name;
 
 
 
