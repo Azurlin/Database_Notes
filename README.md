@@ -1,4 +1,4 @@
-###[在Github Pages中查看](https://azurlin.github.io/Database_Notes)
+[在Github Pages中查看](https://azurlin.github.io/Database_Notes)
 
 # DataBase_Notes
 
