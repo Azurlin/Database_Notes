@@ -7,7 +7,7 @@
 [返回](README.md)
 
 
-   ("[]"标注用户输入的内容)
+   >("[]"标注用户输入的内容)
 
 ### 1.单表数据查询
 
@@ -57,6 +57,57 @@
 
 
 #### (2).条件数据查询
+
+- **带关系运算符和逻辑运算符的条件数据查询**
+
+	>mysql中的关系运算符:'>','>=','<','<=','=','!='(<>)
+	逻辑运算符:and(&&),or(||),not(!)
+
+		select [列1,列2...] from [表名] where [表达式]
+
+		例:
+		对于表t查询月薪在1000-1800的职位
+		select job,sal from t where sal>1000 && sal<1800;
+
+
+- **between and关键字**
+
+		select [列1,列2...] from [表名] where [列名] between [数值] and [数值]	
+		
+		例:
+		对于表t查询月薪在1000-1800的职位</br>
+		select job,sal from t where sal between 1000 and 1800;
+		
+		查询月薪不在1000-1800的职位 between前加'not'
+		select job,sal from t where sal not between 1000 and 1800;
+
+		
+	
+	![sd04]()
+
+
+
+- **is null关键字**
+
+	作用:用来实现判断字段的数值是否为空的条件查询
+
+		select [列1,列2...] from [表名] where [列1,列2...] is null
+
+
+		例：
+		查询t表中提成为空的员工
+		select ename,comm from t where comm is null;
+
+		查询t表中提成不为空的员工
+		select ename,comm from t where comm is not null;
+		或select ename,comm from t where not comm is  null;
+
+	![sd05]()
+
+
+- **in关键字**
+- **like关键字**
+
 #### (3).排序数据查询
 #### (4).限制数据查询
 #### (5).统计函数和分组数据查询
