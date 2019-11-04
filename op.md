@@ -50,7 +50,7 @@
 			列3 数据类型,
 			...
 		);
-创建成功提示Query OK
+
 
 +	**查看表结构**
 
@@ -58,7 +58,7 @@
 		#查看表结构
 		desc table_name;
 
- 		#查看表详细定义
+		#查看表详细定义
 		show create table table_name; 
 		show create table table_name\G # \G结尾可以使显示更美观
 
