@@ -7,7 +7,7 @@
 [返回](README.md)
 
 
-   >("[]"标注用户输入的内容)
+   >("[]"标注输入的内容)
 
 ### 1.单表数据查询
 
@@ -181,7 +181,7 @@
 #### (4).限制数据查询
 限制查询结果的数量
 
-- **不指定初始位置**(默认从第一条数据开始)
+- **指定初始位置**(默认从第一条数据开始)
 
 		select [列1,列2...] from [表名] where [条件] limit [初始位置],[显示数量];
 
@@ -200,7 +200,6 @@
 		select 函数([列名]) from [表名] where [条件];
 
 
-- **count()函数**
 
 	count(*) 统计全部数据的数量<br/>
 	count(列名) 统计某列数据数量，过滤空值
@@ -214,21 +213,56 @@
 		
 	![sd10]() ![sd11]()
 
-- **avg()、sum()函数**
 
-	**avg(列名)** 一种用法，在具体统计时会忽略空值
+	avg(列名) 一种用法，在具体统计时会忽略空值
 
 		例:
 		统计表t有奖金员工的平均值
 		select avg(comm) as average from t;
 
-	**sum(列名)** 对指定字段计算总和，忽略空值
+	sum(列名) 对指定字段计算总和，忽略空值
 
 
 		例:
 		统计表t月薪总和
 		select sum(sal) as sumvalue from t;
 
+
+	max(列名),求最大值忽略空值
+	min(列名),求最小值忽略空值
+
+
+		例：
+		统计表t最高工资和最低工资
+		select max(sal) maxsal,min(sal) minsal from t;
+
+- **分组数据查询**
+
+	通常与统计函数一起使用
+
+ 	**group by与group_concat()函数**
+
+		select [列1,列2...] from [表名] where [条件] group by [列名];
+
+		例:
+		查询t表各部门中员工人数
+		select count(ename),deptno from t group by deptno;
+
+		查询t表按照部门号对所有员工分组，同时显示每组中员工人数
+		select count(ename),deptno,group_concat(ename) from t group by deptno;
+
+	![sd12]() ![sd13]()
+
+	**根据多字段分组查询**
+
+		select [函数],... from [表名] where [条件] group by [列1,列2...];
+		
+
+		例：
+		查询表t，首先按照部门号对所有员工分组，然后按照生日对每组的员工再分组,同时显示人数
+		select deptno,hiredate,group_concat(ename),count(ename) from t group by deptno,hiredate;  
+
+	![sd12]()
 
 
 ### 2.多表数据查询
