@@ -194,7 +194,7 @@
 	>count()函数:统计表中数据的条数<br/>
 	>avg():计算字段平均值<br/>
 	>sum():计算字段总和<br/>
-	>ma():查询字段最大值<br/>
+	>max():查询字段最大值<br/>
 	>min():查询最小值
 
 		select 函数([列名]) from [表名] where [条件];
@@ -240,7 +240,10 @@
 
 	通常与统计函数一起使用
 
- 	**group by与group_concat()函数**
+ 	
+
+	- **group by与group_concat()函数**
+
 
 		select [列1,列2...] from [表名] where [条件] group by [列名];
 
@@ -251,9 +254,12 @@
 		查询t表按照部门号对所有员工分组，同时显示每组中员工人数
 		select count(ename),deptno,group_concat(ename) from t group by deptno;
 
+
 	![sd12]() ![sd13]()
 
-	**根据多字段分组查询**
+	
+
+	- **根据多字段分组查询**
 
 		select [函数],... from [表名] where [条件] group by [列1,列2...];
 		
@@ -264,11 +270,45 @@
 
 	![sd12]()
 
+	- **使用having子句进行条件查询**
+
+	>与where的区别:having是对分组后的数据进行条件查询,写在group by之后
+
+		select [列1,列2...] from [表名] group by [列名] having [条件];
+
+
+
 
 ### 2.多表数据查询
+	
+
+#### (1).内连接查询
+
+	
+- **自连接**
+
+	是内连接查询中一种特殊的等值连接,所谓的自连接就是指表与其自身进行连接
+
+		select e.ename,e.job,m.ename from t r inner join t m on e.mgr=m.empno;
+		
+		例：
+		查询t表每一个员工姓名、职位和其上级的姓名
+
+
+- **等值连接**
+- **不等值连接**
+
+
+#### (2).外连接
 
 
 
+
+
+
+
+
+  ![sd01]()![sd15]()
 
 
 
