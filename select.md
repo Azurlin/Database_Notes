@@ -323,6 +323,33 @@
 
 
 - **等值连接**
+		
+		
+		select [构建的表1].[列名],... from [表1] [构建表1] inner join [表2] [构建表2] on [关联条件];
+
+		等值连接是在关键字on后匹配的条件
+
+		例:
+		查询每个员工的姓名编号和其上级的姓名,部门名,部门位置
+			1).构建关联的表
+				表t e 员工表
+				表td d 部门表
+				表t m 上级表
+			2).关联的条件
+				员工表和部门表的关联条件 e.deptno=d.deptno
+				员工表和上级表的关联条件 e.mgr=m.empno
+			
+		select e.ename,e.empno,m.ename,d.dname,d.loc 
+		from t e 
+		inner join td d on e.deptno=d.deptno
+		inner join t m  on e.mgr=m.empno;
+		
+		
+		
+		例:
+		查询每个员工的员工编号,姓名,工资,职位和领导的姓名,部门名称,部门位置
+		select e.deptno,e.ename,e.sal,e.job,m.ename,m.deptno from t,td where   e.deptno=m.deptno;
+
 - **不等值连接**
 
 
