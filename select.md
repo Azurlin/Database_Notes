@@ -296,9 +296,10 @@
 
 	- **使用having子句进行条件查询**
 
-	>与where的区别:having是对分组后的数据进行条件查询,写在group by之后
 
-		select [列1,列2...] from [表名] group by [列名] having [条件];
+			select [列1,列2...] from [表名] group by [列名] having [条件];
+
+	
 
 
 
@@ -344,21 +345,42 @@
 		inner join td d on e.deptno=d.deptno
 		inner join t m  on e.mgr=m.empno;
 		
-		
-		
-		例:
-		查询每个员工的员工编号,姓名,工资,职位和领导的姓名,部门名称,部门位置
-		select e.deptno,e.ename,e.sal,e.job,m.ename,m.deptno from t,td where   e.deptno=m.deptno;
 
 - **不等值连接**
+
+
+	在关键字on后使用其他关系运算符
+
+		
 
 
 #### (2).外连接
 
 
+>特点:查询结果至少是一个表的所有记录
+
+- **左外联与右外链**
+
+		select [列1,列2...] from [表1] left/right outer join [表2] on [条件];
+	
+	 	左外联：
+		from [表1] left outer join [表2];
+
+		表1为驱动表,表2为匹配表
+		查询结果是驱动表表1的所有记录
+	
+	 	右外联：
+		from [表1] right outer join [表2];
+
+		表2为驱动表,表1为匹配表
+		查询结果是驱动表表2的所有记录
+
+		例:
+		查询每个员工的姓名、职位和领导的姓名
+		select e.ename,e.job,m.ename from t e inner join t m on e.mgr=m.empno;
 
 
-
+#### (3).子查询
 
 
 
