@@ -1,6 +1,18 @@
 ##  查询数据
 <span id="top"></span>
 
+- **[单表查询](#h01)**
+	
+	- [简单数据查询](#select01)
+	- [条件数据查询](#select02)
+	- [排序数据查询](#select03)
+	- [限制数据查询](#select04)
+	- [统计函数和分组数据查询](#select05)
+
+
+- **[多表查询](#h02)**
+
+
 [返回上一级](op.md)
 
 
@@ -9,10 +21,14 @@
 
    >("[]"标注输入的内容)
 
-### 1.单表数据查询
+### 1.单表数据查询 
+
+<span id="h01"></span>
 
 
-#### (1).简单数据查询
+#### (1).简单数据查询 
+
+<span id="select01"></span>
 
 - **查询数据**
 
@@ -57,6 +73,8 @@
 
 
 #### (2).条件数据查询
+
+<span id="select02"></span>
 
 - **带关系运算符和逻辑运算符的条件数据查询**
 
@@ -145,6 +163,8 @@
 
 #### (3).排序数据查询
 
+<span id="select03"></span>
+
 使用order by按照某列进行排序
 
 
@@ -179,6 +199,9 @@
 
 
 #### (4).限制数据查询
+
+<span id="select04"></span>
+
 限制查询结果的数量
 
 - **指定初始位置**(默认从第一条数据开始)
@@ -188,6 +211,8 @@
 
 
 #### (5).统计函数和分组数据查询
+
+<span id="select05"></span>
 
 - **mysql提供的统计函数**
 	
@@ -245,30 +270,30 @@
 	- **group by与group_concat()函数**
 
 
-		select [列1,列2...] from [表名] where [条件] group by [列名];
+			select [列1,列2...] from [表名] where [条件] group by [列名];
+	
+			例:
+			查询t表各部门中员工人数
+			select count(ename),deptno from t group by deptno;
+	
+			查询t表按照部门号对所有员工分组，同时显示每组中员工人数
+			select count(ename),deptno,group_concat(ename) from t group by deptno;
 
-		例:
-		查询t表各部门中员工人数
-		select count(ename),deptno from t group by deptno;
 
-		查询t表按照部门号对所有员工分组，同时显示每组中员工人数
-		select count(ename),deptno,group_concat(ename) from t group by deptno;
-
-
-	![sd12]() ![sd13]()
+		![sd12]() ![sd13]()
 
 	
 
 	- **根据多字段分组查询**
 
-		select [函数],... from [表名] where [条件] group by [列1,列2...];
+			select [函数],... from [表名] where [条件] group by [列1,列2...];
 		
 
-		例：
-		查询表t，首先按照部门号对所有员工分组，然后按照生日对每组的员工再分组,同时显示人数
-		select deptno,hiredate,group_concat(ename),count(ename) from t group by deptno,hiredate;  
+			例：
+			查询表t，首先按照部门号对所有员工分组，然后按照生日对每组的员工再分组,同时显示人数
+			select deptno,hiredate,group_concat(ename),count(ename) from t group by deptno,hiredate;  
 
-	![sd12]()
+		![sd12]()
 
 	- **使用having子句进行条件查询**
 
@@ -280,6 +305,8 @@
 
 
 ### 2.多表数据查询
+
+<span id="h02"></span>
 	
 
 #### (1).内连接查询
@@ -289,10 +316,11 @@
 
 	是内连接查询中一种特殊的等值连接,所谓的自连接就是指表与其自身进行连接
 
-		select e.ename,e.job,m.ename from t r inner join t m on e.mgr=m.empno;
+		
 		
 		例：
 		查询t表每一个员工姓名、职位和其上级的姓名
+		select e.ename,e.job,m.ename from t e inner join t m on e.mgr=m.empno;
 
 
 - **等值连接**
