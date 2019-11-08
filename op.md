@@ -14,10 +14,11 @@
 
  [返回](README.md)
 
-### 1. 关于库的操作
+### 1. 关于库的操作 
 ---
 
-+  **创建库** <span id="op1"></span>
+
++  **创建库** <span id="op1"></span> 
 
 		create database database_name;
 
@@ -41,9 +42,10 @@
 		drop database database_name; #删库
 
 
+[回到顶部](#top)
 
 
-### 2. 关于表的操作
+### 2. 关于表的操作 
 --- 
 
 
@@ -108,6 +110,9 @@
 
 		#同时修改字段名和数据类型
 		alter table table_name change 旧列 新列 新数据类型;
+
+
+[回到顶部](#top)
 
 
 

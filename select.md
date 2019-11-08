@@ -12,8 +12,8 @@
 
 - **[多表查询](#h02)**
 
-	- [内联查询](#select07)
-	- [外联查询](#select08)
+	- [内连接查询](#select07)
+	- [外连接查询](#select08)
 	- [子查询](#select09)
 
 
@@ -73,6 +73,8 @@
 
 &emsp;&emsp;&emsp;![sd03](https://github.com/Azurlin/Database_Notes/blob/master/image/sd03.png?raw=true)
 
+
+[回到顶部](#top)
 
 
 #### (2).条件数据查询 <span id="select02"></span>
@@ -161,8 +163,10 @@
 		例:
 		查询t表中名字以a开头的所有员工
 		select ename from t where ename like 'a%';
-		
-	
+
+
+[回到顶部](#top)
+
 
 #### (3).排序数据查询 <span id="select03"></span>
 
@@ -200,6 +204,8 @@
 	![sd09]()
 
 
+[回到顶部](#top)
+
 
 #### (4).限制数据查询 <span id="select04"></span>
 
@@ -211,6 +217,9 @@
 
 		select [列1,列2...] from [表名] where [条件] limit [初始位置],[显示数量];
 
+
+
+[回到顶部](#top)
 
 
 #### (5).统计函数和分组数据查询 
@@ -305,6 +314,7 @@
 
 	
 
+[回到顶部](#top)
 
 
 
@@ -355,37 +365,45 @@
 
 	在关键字on后使用其他关系运算符
 
+
+[回到顶部](#top)
 		
 
 
-#### (2).外连接 <span id="select08"></span>
+#### (2).外连接查询 <span id="select08"></span>
 
 
 >特点:查询结果至少是一个表的所有记录
 
-- **左外联与右外链**
+- **左外连与右外连**
 
 		select [列1,列2...] from [表1] left/right outer join [表2] on [条件];
 	
-	 	左外联：
+	 	左外连：
 		from [表1] left outer join [表2];
 
 		表1为驱动表,表2为匹配表
 		查询结果是驱动表表1的所有记录
 	
-	 	右外联：
+	 	右外连：
 		from [表1] right outer join [表2];
 
 		表2为驱动表,表1为匹配表
 		查询结果是驱动表表2的所有记录
 
 		例:
-		查询每个员工的姓名、职位和领导的姓名
-		select e.ename,e.job,m.ename from t e inner join t m on e.mgr=m.empno;
+		左外连 查询每个员工的姓名、职位和领导的姓名
+		select e.ename,e.job,d.dname from t e left outer join td d on e.deptno=d.deptno;
 
 
 #### (3).子查询 <span id="select09"></span>
 
+>用来实现多表查询 在子查询中可以包含in any all等关键字,也可以包含比较运算符，比较灵活
+
+	
+- **where子句中的子查询**
+
+- **from子句中的子查询**
 
 
   ![sd01]()![sd15]()
