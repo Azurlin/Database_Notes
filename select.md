@@ -12,6 +12,10 @@
 
 - **[多表查询](#h02)**
 
+	- [内联查询](#select07)
+	- [外联查询](#select08)
+	- [子查询](#select09)
+
 
 [返回上一级](op.md)
 
@@ -309,7 +313,7 @@
 
 	
 
-#### (1).内连接查询
+#### (1).内连接查询 <span id="select07"></span>
 
 	
 - **自连接**
@@ -354,7 +358,7 @@
 		
 
 
-#### (2).外连接
+#### (2).外连接 <span id="select08"></span>
 
 
 >特点:查询结果至少是一个表的所有记录
@@ -380,7 +384,7 @@
 		select e.ename,e.job,m.ename from t e inner join t m on e.mgr=m.empno;
 
 
-#### (3).子查询
+#### (3).子查询 <span id="select09"></span>
 
 
 
