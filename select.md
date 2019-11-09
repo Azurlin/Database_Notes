@@ -429,7 +429,7 @@
 
 
 
-  ![sd01]()![sd15]()
+  ![sd01]()![sd15](https://raw.githubusercontent.com/Azurlin/Database_Notes/master/image/td.png)
 
 
 
