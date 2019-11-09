@@ -56,7 +56,7 @@
 
 
 
-&emsp;&emsp;&emsp;![sd01](https://github.com/Azurlin/Database_Notes/blob/master/image/sd01.png?raw=true)
+&emsp;&emsp;&emsp;![sd01]()
 
 
 &emsp;查询结果
@@ -429,7 +429,7 @@
 
 
 
-  ![sd01]()![sd15](https://raw.githubusercontent.com/Azurlin/Database_Notes/master/image/td.png)
+  ![sd01](https://github.com/Azurlin/Database_Notes/blob/master/image/sd01.png?raw=true)![sd15](https://raw.githubusercontent.com/Azurlin/Database_Notes/master/image/td.png)
 
 
 
