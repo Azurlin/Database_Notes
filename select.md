@@ -401,9 +401,35 @@
 >用来实现多表查询 在子查询中可以包含in any all等关键字,也可以包含比较运算符，比较灵活
 
 	
-- **where子句中的子查询**
+- **在where、in子句中的子查询**
 
-- **from子句中的子查询**
+
+		例:
+		查询表t月薪高于smith的信息
+		select * from t where sal>(select sal from t where ename='smith');
+		
+		select * from t in(...);
+		
+
+- **any关键字**
+
+	>=any:功能与in相同<br/>
+	>\>any:比子查询返回的数据中最小的还要大的<br/>
+	><any:比子查询返回的数据最大的还要小的数据<br/>
+	
+		例:
+		查询员工表中员工姓名和工资,这些员工的工资不低于职位为manager的工资
+		s1:先查询员工表中职位为manager的工资
+			select sal from t where job='manager';
+		s2:查询工资不低于上述结果的
+			select ename,sal from t where sal>any(select sal from t where job='manager');
+		
+
+- from子句中的子查询
+
+		select e.deptno,d.dname,d.loc,group_concat(sal) from t e inner join td d on e.deptno=d.deptno group by e.deptno;  
+
+
 
 
   ![sd01]()![sd15]()
