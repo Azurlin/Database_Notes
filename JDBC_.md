@@ -2,7 +2,7 @@
 
 
 
-1. **JDBC**(java Database Connection)java数据库连接技术
+1. **JDBC**(java Database Connection)java数据库连接
 
 	
 
