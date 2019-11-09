@@ -11,7 +11,7 @@
  ![ini1](https://github.com/Azurlin/Database_Notes/blob/master/image/ini1.png?raw=true)
 
 &emsp; &emsp; root@localhost:后面的就是初始密码<br/>
-&emsp; &emsp; 重置密码：**mysql> ALTER USER USER() IDENTIFIED BY '新的密码';**<br/>
+&emsp; &emsp; 重置密码：** ALTER USER USER() IDENTIFIED BY '新的密码';**<br/>
 &emsp; &emsp; 之后直接用**mysqld --console**启动服务
 
 ##### 3.启动MySQL

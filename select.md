@@ -424,10 +424,7 @@
 		s2:查询工资不低于上述结果的
 			select ename,sal from t where sal>any(select sal from t where job='manager');
 		
-
-- from子句中的子查询
-
-		select e.deptno,d.dname,d.loc,group_concat(sal) from t e inner join td d on e.deptno=d.deptno group by e.deptno;  
+ 
 
 
 
