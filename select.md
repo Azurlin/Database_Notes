@@ -50,28 +50,19 @@
 		select [原列名] as [显示的新列名] from [表名];  #as可以省略
 
 
-&emsp;例：
 
-&emsp;原表t 
-
+&emsp;表t 见底部
 
 
-&emsp;&emsp;&emsp;![sd01]()
 
 
-&emsp;查询结果
-
-
-&emsp;&emsp;&emsp;![sd02](https://github.com/Azurlin/Database_Notes/blob/master/image/sd02.png?raw=true)
 
 - **concat设置数据查询的显示格式**
 
 		#concat()函数可以连接字符串
 		select concat(ename,':',sal*12)  yearsal from t;
 
-&emsp;例：
 
-&emsp;&emsp;&emsp;![sd03](https://github.com/Azurlin/Database_Notes/blob/master/image/sd03.png?raw=true)
 
 
 [回到顶部](#top)
