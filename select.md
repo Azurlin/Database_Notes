@@ -97,7 +97,7 @@
 
 		
 	
-	![sd04]()
+	
 
 
 
@@ -116,7 +116,7 @@
 		select ename,comm from t where comm is not null;
 		或select ename,comm from t where not comm is  null;
 
-	![sd05]()
+	
 
 
 - **in关键字**
@@ -137,7 +137,7 @@
 	>在使用not in时，查询的集合中如果存在null，则不会有任何查询结果。
 
 
-	![sd06]()   ![sd07]()
+	
 
 
 - **like关键字**
