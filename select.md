@@ -283,7 +283,7 @@
 			select count(ename),deptno,group_concat(ename) from t group by deptno;
 
 
-		![sd12]() ![sd13]()
+		
 
 	
 
@@ -296,7 +296,7 @@
 			查询表t，首先按照部门号对所有员工分组，然后按照生日对每组的员工再分组,同时显示人数
 			select deptno,hiredate,group_concat(ename),count(ename) from t group by deptno,hiredate;  
 
-		![sd12]()
+		
 
 	- **使用having子句进行条件查询**
 
